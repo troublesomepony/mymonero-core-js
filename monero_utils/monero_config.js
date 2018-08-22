@@ -32,27 +32,27 @@ const JSBigInt = require("../cryptonote_utils/biginteger").BigInteger;
 //
 module.exports = {
 	// Number of atomic units in one unit of currency. e.g. 12 => 10^12 = 1000000000000
-	coinUnitPlaces: 12,
+	coinUnitPlaces: 11,
 
 	// Minimum number of confirmations for a transaction to show as confirmed
 	txMinConfirms: 10,
 
 	// Currency symbol
-	coinSymbol: "XMR",
+	coinSymbol: "MRX",
 
 	// OpenAlias prefix
-	openAliasPrefix: "xmr",
+	openAliasPrefix: "mrx",
 
 	// Currency name
-	coinName: "Monero",
+	coinName: "MoneroX",
 
 	// Payment URI Prefix
-	coinUriPrefix: "monero:",
+	coinUriPrefix: "monerox:",
 
 	// Prefix code for addresses
-	addressPrefix: 18, // 18 => addresses start with "4"
-	integratedAddressPrefix: 19,
-	subaddressPrefix: 42,
+	addressPrefix: 1, // 18 => addresses start with "4"
+	integratedAddressPrefix: 6,
+	subaddressPrefix: 12,
 
 	// Dust threshold in atomic units
 	// 2*10^9 used for choosing outputs/change - we decompose all the way down if the receiver wants now regardless of threshold
@@ -62,5 +62,5 @@ module.exports = {
 	maxBlockNumber: 500000000,
 
 	// Average block time in seconds, used for unlock time estimation
-	avgBlockTime: 60,
+	avgBlockTime: 120,
 };
