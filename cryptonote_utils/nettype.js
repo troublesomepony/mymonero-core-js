@@ -48,9 +48,10 @@ var __STAGENET_CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 25;
 var __STAGENET_CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 36;
 //
 function cryptonoteBase58PrefixForStandardAddressOn(nettype) {
-	if (nettype == null || typeof nettype === "undefined") {
-		console.warn("Unexpected nil nettype");
-	}
+	// if (nettype == null || typeof nettype === "undefined") {
+	// 	console.warn("Unexpected nil nettype");
+	// }
+	nettype || (nettype = network_type.MAINNET)
 	if (nettype == network_type.MAINNET) {
 		return __MAINNET_CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX;
 	} else if (nettype == network_type.TESTNET) {
